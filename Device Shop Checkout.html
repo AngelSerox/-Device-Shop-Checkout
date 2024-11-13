@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Device Shop Checkout</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <script src="switchToggle.js"></script>
+    </head>
+    <body>
+        <div id="encabezado">
+            <h1>Checkout</h1>
+            <p>3 ITEMS</p>
+        </div>
+        <div id="Contenedor">
+            <div id="Productos">
+                <div id="ProductoWrapper">
+                    <div id="Iphone">
+                        <img src="Gold.png" id="imagen">
+                        <p class="Nombre">iPhone 12 Pro</p>
+                        <p class="Color">Golden</p>
+                        <p class="Precio">$999.00</p>
+                        <p class="Cantidad">x 1</p>
+                        <button class="cancelar">X</button>
+                    </div> 
+                </div>         
+                <div id="ProductoWrapper">
+                    <div id="Apple_Watch">
+                        <img src="Apple-watch.png" id="imagen">
+                        <p class="Nombre">Apple Watch</p>
+                        <p class="Precio">$399.00</p>
+                        <p class="Color">Blue</p>
+                        <p class="Cantidad">x 1</p>
+                        <button class="cancelar">X</button>
+                    </div>
+                </div>
+                <div id="ProductoWrapper">
+                    <div id="iMac">
+                        <img src="iMac.png" id="imagen">
+                        <p class="Nombre">iMac</p>
+                        <p class="Precio">$1199.00</p>
+                        <p class="Color">Green</p>
+                        <p class="Cantidad">x 1</p>
+                        <button class="cancelar">X</button>
+                    </div>
+                </div>
+                <hr>
+                <div id="Cupon">
+                    <input type="text" placeholder="Enter coupon code">
+                    <button id="button_1">Apply Coupon</button>
+                </div>
+                <div id="Total">
+                    <p class="texto_bold">Sub Total</p>
+                    <p class="texto_bold">$2597.00</p>
+                    <p class="texto_bold">Tax</p>
+                    <p class="texto_bold">$623.28</p>
+                    <p class="texto_bold">Total</p>
+                    <p class="texto_bold">$3220.00</p>
+                </div>
+            </div>
+            <div id="Informacion_de_Contacto">
+                <p id="Texto_negro">Contact Information</p>
+                <div id="Nombre_Usuario">
+                    <p class="texto_pequeño">First & Last name</p>
+                    <input type="text" placeholder="Enter first & last name">
+                </div>
+                <div id="Correo">
+                    <p class="texto_pequeño">Email address</p>
+                    <input type="text" placeholder="Enter email address">
+                </div>
+                <div id="Ubicacion">
+                    <div id="Pais">
+                        <p class="texto_pequeño">Country</p>
+                        <select id="paises">
+                            <option>Finland</option>
+                            <option>Rush</option>
+                            <option>China</option>
+                        </select>
+                    </div>
+                    <div id="codigo_postal">
+                        <p class="texto_pequeño">Postal Code</p>
+                        <input type="text" placeholder="00270">
+                    </div>
+                </div>
+                <button id="button_2">Continue</button>
+            </div>
+        </div>
+    </body>
+</html>

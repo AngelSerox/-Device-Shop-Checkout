@@ -1,0 +1,293 @@
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url("background-image.png"); /* Imagen de fondo */
+    background-position: center top; /* Centra la imagen en la parte superior */
+    background-size: contain; /* Ajusta la imagen sin distorsión */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: flex-start; /* Comienza desde la parte superior */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+#encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente dentro del encabezado */
+    gap: 16px; /* Espacio entre h1 y p */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+/* Estilos para el título dentro del encabezado */
+#encabezado h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Estilos para el párrafo dentro del encabezado */
+#encabezado p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #1D1D1F;
+    padding: 5px 10px;
+    border-radius: 20px; /* Bordes redondeados */
+    margin: 0;
+}
+
+/* Contenedor principal */
+#Contenedor {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    gap: 0; /* Sin espacio entre los elementos internos */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra en la parte inferior */
+    background-color: transparent; /* Fondo transparente */
+    margin-bottom: 30px;
+}
+
+/* Texto pequeño y negrita */
+.texto_pequeño{
+    font-size: 0.875rem;
+    color: #394150;
+    font-weight: 600;
+}
+
+#Texto_negro{
+    color: #394150;
+    font-weight: 700;
+}
+
+/* Divs para productos e información de contacto */
+#Productos, #Informacion_de_Contacto {
+    flex: 1; /* Ambos ocupan el 50% del ancho de #Contenedor */
+    padding: 0 15px; /* Espacio lateral */
+}
+
+/* Remueve margen en elementos hijos de Productos y Contacto */
+#Productos > *, #Informacion_de_Contacto > * {
+    margin: 0;
+}
+
+/* Div de información de contacto */
+#Informacion_de_Contacto {
+    flex: 1; /* 50% del ancho */
+    background-color: #FFFFFF;
+    padding: 10px 30px; /* Espacio lateral */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Ajuste del espacio entre los elementos en información de contacto */
+#Informacion_de_Contacto p,
+#Informacion_de_Contacto div,
+#button_2 {
+    margin: 15px 0; /* Espacio vertical entre elementos */
+}
+
+#Informacion_de_Contacto input[type="text"],
+#Informacion_de_Contacto select{
+    background-color: #F3F4F6; /* Fondo para inputs y select */
+}
+
+/* Estilos para inputs, select y botón dentro de información de contacto */
+#Informacion_de_Contacto input[type="text"],
+#Informacion_de_Contacto select,
+#button_2 {
+    width: calc(100% - 10px); /* Tamaño completo menos espacio lateral */
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+/* Botón con altura consistente */
+#button_2 {
+    height: 60px;
+    background-color: #1D1D1F;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+/* Estilos para el div de ubicación */
+#Ubicacion {
+    display: flex;
+    gap: 15px; /* Espacio entre país y código postal */
+}
+
+/* Estilos para los divs de país y código postal */
+#Pais, #codigo_postal {
+    flex: 1; /* Ancho igual */
+}
+
+/* Estilos para el select de País y el input de código postal */
+#Ubicacion select,
+#Ubicacion input[type="text"] {
+    width: 95%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Estilos para el contenedor de productos */
+#Productos{
+    background-color: #D2D5DA;
+    padding: 30px 30px;
+    display: grid;
+    gap: 22.5px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Imagen de productos */
+#Productos img {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Wrapper para tamaño de contenedor */
+#ProductoWrapper {
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    background-color: #D2D5DA;
+    border-radius: 10px;
+}
+
+/* Configuración de cuadrícula interna de productos */
+#Iphone,  #Apple_Watch, #iMac {
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 1.60rem);
+}
+
+/* Imagen ocupa las primeras celdas */
+#imagen {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+/* Estilos de etiquetas en la cuadrícula */
+.Nombre {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: 700;
+}
+
+.Color {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.Cantidad {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 0.875rem;
+}
+
+.Precio {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    font-weight: 700;
+}
+
+/* Botón cancelar dentro de la cuadrícula */
+.cancelar {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    background-color: #D2D5DA;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: none;
+}
+
+/* Div de cupones con Flexbox */
+#Cupon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo para el input de cupon */
+#Cupon input {
+    width: calc(100% - 150px);
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de cupon */
+#Cupon button {
+    flex-grow: 1;
+    height: 60px;
+    background-color: #1D1D1F;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+/* Estilos del contenedor Total */
+#Total {
+    display: grid;
+    grid-template-columns: 1fr 12rem;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 120%;
+    padding: 0;
+}
+
+/* Texto en negrita en Total */
+#Total .texto_bold {
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+}
+
+/* Valores numéricos alineados a la derecha */
+#Total p:not(.texto_bold) {
+    text-align: right;
+    margin: 0;
+    width: 1000px;
+}
